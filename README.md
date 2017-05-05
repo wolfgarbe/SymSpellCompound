@@ -13,11 +13,10 @@ SymSpell assumed every input string as _single term_. SymSpellCompound supports 
 2. mistakenly _omitted space between two correct words_ led to one incorrect combined term
 3. _multiple input terms_ with/without spelling errors
 
-__Automatic spelling correction & context awareness__
+__Automatic spelling correction__
 
-* To digitize paper-based archives OCR is used, which introduces errors. Large archives make manual correction infeasible and require unsupervised, fully-automatic spelling correction. 
-* In normal spelling correction, the user is presented with spelling correction suggestions. The user then has to make the right choice based on context.
-* For automatic spelling correction the context has to be analyzed and interpreted by the algorithm itself to make an educated choice.
+* Large document collections make manual correction infeasible and require unsupervised, fully-automatic spelling correction. 
+* In normal spelling correction, the user is presented with spelling correction suggestions. For automatic spelling correction the the algorithm itself has to make an educated choice.
 
 __Examples:__
 
@@ -42,7 +41,7 @@ __Performance:__
 
 __Applications__
 
-Query correction, ocr post-processing, orthographic quality assessment, agent & chat bot conversation.
+Query correction, OCR post-processing, orthographic quality assessment, agent & chat bot conversation.
 
 __Blog Posts: Algorithm, Benchmarks, Applications__
 
