@@ -5,16 +5,16 @@ __Examples:__
 
 ```diff
 - whereis th elove hehad dated forImuch of thepast who couqdn'tread in sixthgrade and ins pired him
-+ where is the love he had dated for much of the past who couldn't read in sixth grade and inspired him  (edit distance=9)
++ where is the love he had dated for much of the past who couldn't read in sixth grade and inspired him  (9 edits)
 
 - in te dhird qarter oflast jear he hadlearned ofca sekretplan y iran
-+ in the third quarter of last year he had learned of a secret plan by iran  (edit distance=10)
++ in the third quarter of last year he had learned of a secret plan by iran  (10 edits)
 
 - the bigjest playrs in te strogsommer film slatew ith plety of funn
-+ the biggest players in the strong summer film slate with plenty of fun  (edit distance=9)
++ the biggest players in the strong summer film slate with plenty of fun  (9 edits)
 
 - Can yu readthis messa ge despite thehorible sppelingmsitakes
-+ can you read this message despite the horrible spelling mistakes  (edit distance=9)
++ can you read this message despite the horrible spelling mistakes  (9 edits)
 ```
 
 __Performance:__
