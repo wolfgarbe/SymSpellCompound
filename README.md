@@ -39,7 +39,7 @@ __Examples:__
 __Performance:__
 
 0.2 milliseconds / word  
-5000 words / second  (Single Core on 2012 Macbook Pro)
+5000 words / second  (single core on 2012 Macbook Pro)
 
 __Applications__
 
