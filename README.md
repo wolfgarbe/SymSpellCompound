@@ -13,6 +13,8 @@ SymSpell assumed every input string as _single term_. SymSpellCompound supports 
 2. mistakenly _omitted space between two correct words_ led to one incorrect combined term
 3. _multiple input terms_ with/without spelling errors
 
+Splitting errors, concatenation errors, substitution errors, transposition errors, deletion errors and insertion errors can by mixed within the same word.
+
 __Automatic spelling correction__
 
 * Large document collections make manual correction infeasible and require unsupervised, fully-automatic spelling correction. 
