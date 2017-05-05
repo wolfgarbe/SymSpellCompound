@@ -1,4 +1,6 @@
 # SymSpellCompound
+=========
+
 __Compound &amp; context aware automatic spelling correction__
 
 __Examples:__
@@ -23,8 +25,8 @@ __Performance:__
 5000 words / second  (Single Core on 2012 Macbook Pro)
 
 
-__SymSpell improved correction speed by six orders of magnitude, 
-SymSpellCompound goes beyond that and adresses the following challenges:__
+[SymSpell](https://github.com/wolfgarbe/symspell) improved correction speed by six orders of magnitude, 
+__SymSpellCompound__ goes beyond that and adresses the following challenges:
 
 __compound splitting & decompounding__
 
