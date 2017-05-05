@@ -24,6 +24,31 @@ __Performance:__
 0.2 milliseconds / word  
 5000 words / second  (Single Core on 2012 Macbook Pro)
 
+```
+Copyright (C) 2017 Wolf Garbe
+Version: 1.0
+Author: Wolf Garbe <wolf.garbe@faroo.com>
+Maintainer: Wolf Garbe <wolf.garbe@faroo.com>
+License:
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License, 
+version 3.0 (LGPL-3.0) as published by the Free Software Foundation.
+http://www.opensource.org/licenses/LGPL-3.0
+```
+Usage: multiple words + Enter:  Display spelling suggestions
+       Enter without input:     Terminate the program
+
+
+
+<br><br>
+__UPDATE: see also [SymSpellCompound](https://github.com/wolfgarbe/SymSpellCompound)__
+<br><br>
+##### Blog Posts: Algorithm, Benchmarks, Applications
+[1000x Faster Spelling Correction algorithm](http://blog.faroo.com/2012/06/07/improved-edit-distance-based-spelling-correction/)<br>
+[1000x Faster Spelling Correction: Source Code released](http://blog.faroo.com/2012/06/24/1000x-faster-spelling-correction-source-code-released/)<br>
+[Fast approximate string matching with large edit distances in Big Data](http://blog.faroo.com/2015/03/24/fast-approximate-string-matching-with-large-edit-distances/)<br> 
+[Very fast Data cleaning of product names, company names & street names](http://blog.faroo.com/2015/09/29/how-to-correct-company-names-street-names-product-names/) 
+<br><br>
 
 [SymSpell](https://github.com/wolfgarbe/symspell) improved correction speed by six orders of magnitude, 
 __SymSpellCompound__ goes beyond that and adresses the following challenges:
