@@ -56,8 +56,10 @@ If 2 corrections have the same edit distance, it should use the more probable on
 It need to know the probability also for rare terms, because most of the word belong to the long tail (zipfean distribution).  
 	
 __Bigram frequency dictionary__
+
 Ff 2 corrections have the same edit distance, and about the same frequency, the algorithm still can decide by context. Some word pairs are much more likely then others (markov chains)
 This kind of context can be derived from a bigram frequency dictionary.
 
 __Applications__
+
 Query correction, ocr post-processing, orthographic quality assessment, agent & chat bot conversation.
