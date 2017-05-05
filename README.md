@@ -40,6 +40,18 @@ __Performance:__
 0.2 milliseconds / word  
 5000 words / second  (Single Core on 2012 Macbook Pro)
 
+__Applications__
+
+Query correction, ocr post-processing, orthographic quality assessment, agent & chat bot conversation.
+
+__Blog Posts: Algorithm, Benchmarks, Applications__
+
+[1000x Faster Spelling Correction algorithm](http://blog.faroo.com/2012/06/07/improved-edit-distance-based-spelling-correction/)<br>
+[1000x Faster Spelling Correction: Source Code released](http://blog.faroo.com/2012/06/24/1000x-faster-spelling-correction-source-code-released/)<br>
+[Fast approximate string matching with large edit distances in Big Data](http://blog.faroo.com/2015/03/24/fast-approximate-string-matching-with-large-edit-distances/)<br> 
+[Very fast Data cleaning of product names, company names & street names](http://blog.faroo.com/2015/09/29/how-to-correct-company-names-street-names-product-names/) 
+<br><br>
+
 ```
 Copyright (C) 2017 Wolf Garbe
 Version: 1.0
@@ -54,19 +66,4 @@ http://www.opensource.org/licenses/LGPL-3.0
 Usage: multiple words + Enter:  Display spelling suggestions
        Enter without input:     Terminate the program
 
-<br><br>
-
-
-
-
-__Applications__
-
-Query correction, ocr post-processing, orthographic quality assessment, agent & chat bot conversation.
-
-__Blog Posts: Algorithm, Benchmarks, Applications__
-
-[1000x Faster Spelling Correction algorithm](http://blog.faroo.com/2012/06/07/improved-edit-distance-based-spelling-correction/)<br>
-[1000x Faster Spelling Correction: Source Code released](http://blog.faroo.com/2012/06/24/1000x-faster-spelling-correction-source-code-released/)<br>
-[Fast approximate string matching with large edit distances in Big Data](http://blog.faroo.com/2015/03/24/fast-approximate-string-matching-with-large-edit-distances/)<br> 
-[Very fast Data cleaning of product names, company names & street names](http://blog.faroo.com/2015/09/29/how-to-correct-company-names-street-names-product-names/) 
 <br><br>
