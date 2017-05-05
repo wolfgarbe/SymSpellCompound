@@ -1,7 +1,7 @@
 # SymSpellCompound
 
 
-__Compound &amp; context aware automatic spelling correction__
+__Compound aware automatic spelling correction__
 
 __Examples:__
 
