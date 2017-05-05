@@ -30,10 +30,10 @@ __SymSpellCompound__ goes beyond that and adresses the following challenges:
 
 __Compound splitting & decompounding__
 
-SymSpell assumed every input string as single term. SymSpellCompound supports compound splitting / decompounding with three cases:
-1. mistakenly inserted space into a correct word led to two incorrect terms 
-2. mistakenly omitted space between two correct words led to one incorrect combined term
-3. multiple independent input terms with/without spelling errors
+SymSpell assumed every input string as _single term_. SymSpellCompound supports _compound splitting / decompounding_ with three cases:
+1. mistakenly _inserted space into a correct word_ led to two incorrect terms 
+2. mistakenly _omitted space between two correct words_ led to one incorrect combined term
+3. _multiple input terms_ with/without spelling errors
 
 __Automatic spelling correction & context awareness__
 
