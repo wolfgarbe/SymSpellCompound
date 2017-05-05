@@ -38,16 +38,6 @@ http://www.opensource.org/licenses/LGPL-3.0
 Usage: multiple words + Enter:  Display spelling suggestions
        Enter without input:     Terminate the program
 
-
-
-<br><br>
-__UPDATE: see also [SymSpellCompound](https://github.com/wolfgarbe/SymSpellCompound)__
-<br><br>
-##### Blog Posts: Algorithm, Benchmarks, Applications
-[1000x Faster Spelling Correction algorithm](http://blog.faroo.com/2012/06/07/improved-edit-distance-based-spelling-correction/)<br>
-[1000x Faster Spelling Correction: Source Code released](http://blog.faroo.com/2012/06/24/1000x-faster-spelling-correction-source-code-released/)<br>
-[Fast approximate string matching with large edit distances in Big Data](http://blog.faroo.com/2015/03/24/fast-approximate-string-matching-with-large-edit-distances/)<br> 
-[Very fast Data cleaning of product names, company names & street names](http://blog.faroo.com/2015/09/29/how-to-correct-company-names-street-names-product-names/) 
 <br><br>
 
 [SymSpell](https://github.com/wolfgarbe/symspell) improved correction speed by six orders of magnitude, 
@@ -88,3 +78,10 @@ This kind of context can be derived from a bigram frequency dictionary.
 __Applications__
 
 Query correction, ocr post-processing, orthographic quality assessment, agent & chat bot conversation.
+
+##### Blog Posts: Algorithm, Benchmarks, Applications
+[1000x Faster Spelling Correction algorithm](http://blog.faroo.com/2012/06/07/improved-edit-distance-based-spelling-correction/)<br>
+[1000x Faster Spelling Correction: Source Code released](http://blog.faroo.com/2012/06/24/1000x-faster-spelling-correction-source-code-released/)<br>
+[Fast approximate string matching with large edit distances in Big Data](http://blog.faroo.com/2015/03/24/fast-approximate-string-matching-with-large-edit-distances/)<br> 
+[Very fast Data cleaning of product names, company names & street names](http://blog.faroo.com/2015/09/29/how-to-correct-company-names-street-names-product-names/) 
+<br><br>
