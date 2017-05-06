@@ -8,9 +8,9 @@ __SymSpellCompound__ supports __compound__ aware __automatic__ spelling correcti
 __Compound splitting & decompounding__
 
 SymSpell assumed every input string as _single term_. SymSpellCompound supports _compound splitting / decompounding_ with three cases:
-1. mistakenly _inserted space into a correct word_ led to two incorrect terms 
-2. mistakenly _omitted space between two correct words_ led to one incorrect combined term
-3. _multiple input terms_ with/without spelling errors
+1. mistakenly __inserted space within a correct word__ led to two incorrect terms 
+2. mistakenly __omitted space between two correct words__ led to one incorrect combined term
+3. __multiple input terms__ with/without spelling errors
 
 Splitting errors, concatenation errors, substitution errors, transposition errors, deletion errors and insertion errors can by mixed within the same word.
 
