@@ -5,7 +5,7 @@ __Compound aware automatic spelling correction__
 
 __SymSpellCompound__ supports __compound__ aware __automatic__ spelling correction of __multi-word input__ strings. <br>It is built on top of [SymSpell](https://github.com/wolfgarbe/symspell)'s __1 million times faster__ spelling correction algorithm.
 
-__Compound splitting & decompounding__
+__1. Compound splitting & decompounding__
 
 SymSpell assumed every input string as _single term_. SymSpellCompound supports _compound splitting / decompounding_ with three cases:
 1. mistakenly __inserted space within a correct word__ led to two incorrect terms 
@@ -14,7 +14,7 @@ SymSpell assumed every input string as _single term_. SymSpellCompound supports 
 
 Splitting errors, concatenation errors, substitution errors, transposition errors, deletion errors and insertion errors can by mixed within the same word.
 
-__Automatic spelling correction__
+__2. Automatic spelling correction__
 
 * Large document collections make manual correction infeasible and require unsupervised, fully-automatic spelling correction. 
 * In conventional spelling correction of a single token, the user is presented with spelling correction suggestions. <br>For automatic spelling correction of long multi-word text the the algorithm itself has to make an educated choice.
