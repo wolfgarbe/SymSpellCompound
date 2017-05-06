@@ -3,7 +3,7 @@
 
 __Compound aware automatic spelling correction__
 
-__SymSpellCompound__ supports __compound__ aware __automatic__ spelling correction. It is built on top of [SymSpell's](https://github.com/wolfgarbe/symspell)'s __1 million times faster__ spelling correction.
+__SymSpellCompound__ supports __compound__ aware __automatic__ spelling correction. It is built on top of [SymSpell's](https://github.com/wolfgarbe/symspell)'s __1 million times faster__ spelling correction algorithm.
 
 __Compound splitting & decompounding__
 
