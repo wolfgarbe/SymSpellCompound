@@ -17,7 +17,7 @@ Splitting errors, concatenation errors, substitution errors, transposition error
 __Automatic spelling correction__
 
 * Large document collections make manual correction infeasible and require unsupervised, fully-automatic spelling correction. 
-* In conventional spelling correction of single tokens, the user is presented with spelling correction suggestions. For automatic spelling correction of long multi-word text the the algorithm itself has to make an educated choice.
+* In conventional spelling correction of a single token, the user is presented with spelling correction suggestions. <br>For automatic spelling correction of long multi-word text the the algorithm itself has to make an educated choice.
 
 __Examples:__
 
