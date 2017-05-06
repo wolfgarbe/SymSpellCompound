@@ -35,7 +35,7 @@ __Examples:__
 + can you read this message despite the horrible spelling mistakes  (9 edits)
 ```
 
-__Performance:__
+__Performance__
 
 0.2 milliseconds / word  
 5000 words / second  (single core on 2012 Macbook Pro)
@@ -43,6 +43,12 @@ __Performance:__
 __Applications__
 
 Query correction, OCR post-processing, orthographic quality assessment, agent & chat bot conversation.
+
+__Frequency dictionary__
+
+The word frequency list was created by intersecting the two lists mentioned below. By reciprocally filtering only those words which appear in both lists are used. Additional filters were applied.
+* [Google Books Ngram data](http://storage.googleapis.com/books/ngrams/books/datasetsv2.html)   [License](https://creativecommons.org/licenses/by/3.0/)  
+* [SCOWL (Spell Checker Oriented Word Lists)](http://wordlist.aspell.net/)   [License](http://wordlist.aspell.net/scowl-readme/)     
 
 __Blog Posts: Algorithm, Benchmarks, Applications__
 
