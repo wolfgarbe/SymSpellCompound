@@ -20,7 +20,7 @@
 // Author: Wolf Garbe <wolf.garbe@faroo.com>
 // Maintainer: Wolf Garbe <wolf.garbe@faroo.com>
 // URL: https://github.com/wolfgarbe/SymSpellCompound
-// Description: https://github.com/wolfgarbe/SymSpellCompound
+// Description: https://medium.com/wolfgarbe/symspellcompound-10ec8f467c9b
 //
 // License:
 // This program is free software; you can redistribute it and/or modify
@@ -77,7 +77,6 @@ static class SymSpell
             return term.GetHashCode();
         }
 
-        //http://www.cshandler.com/2012/07/shallow-copy-and-deep-copy-using.html#.WQMxhVWGNaQ
         public suggestItem ShallowCopy()
         {
             return (suggestItem)MemberwiseClone();
@@ -101,11 +100,11 @@ static class SymSpell
     {
         // \w Alphanumeric characters (including non-latin characters, umlaut characters and digits) plus "_" 
         // \d Digits
-        // Provides identical results to Norvigs regex "[a-z]+" for latin characters, while additionally providing compatibility with non-latin characters
-
-        //for benchmarking only, to provide the exact same number of dictionary items to Norvig's algorithm, but splits words at apostrophes 
-        //return Regex.Matches(text.ToLower(), @"[\w-[\d_]]+").Cast<Match>().Select(m => m.Value);
+        // Compatible with non-latin characters, does not split words at apostrophes
         return Regex.Matches(text.ToLower(), @"['’\w-[_]]+").Cast<Match>().Select(m => m.Value);
+
+        //for benchmarking only: with CreateDictionary("big.txt","") and the text corpus from http://norvig.com/big.txt  the Regex below provides the exact same number of dictionary items as Norvigs regex "[a-z]+" (which splits words at apostrophes & incompatible with non-latin characters)
+        //return Regex.Matches(text.ToLower(), @"[\w-[\d_]]+").Cast<Match>().Select(m => m.Value);       
     }
 
     public static int maxlength = 0;//maximum dictionary term length
@@ -113,7 +112,7 @@ static class SymSpell
     //for every word there all deletes with an edit distance of 1..editDistanceMax created and added to the dictionary
     //every delete entry has a suggestions list, which points to the original term(s) it was created from
     //The dictionary may be dynamically updated (word frequency and new words) at any time by calling createDictionaryEntry
-    private static bool CreateDictionaryEntry(string key, string language, Int64 count) //count=0 : value.count++/ count>0 : value.count=count
+    private static bool CreateDictionaryEntry(string key, string language, Int64 count)
     {
         //a treshold might be specifid, when a term occurs so frequently in the corpus that it is considered a valid word for spelling correction
         int countTreshold = 1;
@@ -141,16 +140,14 @@ static class SymSpell
             }
 
             countPrevious = value.count;
-            //summarizes multiple frequency entries of a word
-            if (count > 0) value.count +=count;
-            //prevent overflow (repetitions of a word)
-            else if (value.count < Int64.MaxValue) value.count++;
+            //summarizes multiple frequency entries of a word (prevents overflow)
+            value.count = Math.Min(Int64.MaxValue, value.count + count);
         }
         else 
         {
             //new word
             value = new dictionaryItem();
-            if (count > 0) value.count = count; else value.count++;
+            value.count = count;
             itemlist.Add(value); 
             dictionary[language + key] = -itemlist.Count;
 
@@ -267,8 +264,7 @@ static class SymSpell
             {
                 foreach (string key in parseWords(line))
                 {
-                   if ((key.Length == 1) && (key != "a") && (key != "i")) continue; 
-                   if (CreateDictionaryEntry(key, language,0)) wordCount++;
+                   if (CreateDictionaryEntry(key, language,1)) wordCount++;
                 }
             }
         }
@@ -342,16 +338,14 @@ static class SymSpell
                 if (valueo >= 0) value.suggestions.Add((Int32)valueo); else value = itemlist[-valueo - 1];
 
                 //if count>0 then candidate entry is correct dictionary term, not only delete item
-                //if ((value.count > 0) && hashset2.Add(candidate))
-                //New: supress short, infrequent terms as suggestion, because that are probably spelling errors that made it to the dictionary
-                if (((value.count > 100)||((candidate.Length > 2)&&(value.count > 0)) ) && hashset2.Add(candidate))
+                if ((value.count > 0) && hashset2.Add(candidate))
                 {
                     int distance = input.Length - candidate.Length;
                     //save some time
                     //do not process higher distances than those already found, if verbose<2      
                     if ((verbose == 2) || (suggestions.Count == 0) || (distance <= suggestions[0].distance))
                     {
-                        //Fix: previously not allways all suggestions were returned for verbose<2 : e.g. elove did not return love (edit distance=0)
+                        //Fix: previously not allways all suggestons within editdistance (verbose=1) or the best suggestion (verbose=0) were returned : e.g. elove did not return love
                         //suggestions.Clear() was not executed in this branch, if a suggestion with lower edit distance was added here (for verbose<2). 
                         //Then possibly suggestions with higher edit distance remained on top, the suggestion with lower edit distance were added to the end. 
                         //All of them where deleted later once a suggestion with a lower distance than the first item in the list was later added in the other branch. 
@@ -416,13 +410,9 @@ static class SymSpell
                                 si.count = itemlist[-value2 - 1].count;
                                 si.distance = distance;
 
-                                //New: supress short, infrequent terms as suggestion, because that are probably spelling errors that made it to the dictionary
-                                if ((si.count > 100) || (suggestion.Length > 2)) 
-                                {
-                                    //remove all existing suggestions of higher distance, if verbose<2
-                                    if ((verbose < 2) && (suggestions.Count > 0) && (suggestions[0].distance > distance)) suggestions.Clear();
-                                    suggestions.Add(si);
-                                }
+                                //remove all existing suggestions of higher distance, if verbose<2
+                                if ((verbose < 2) && (suggestions.Count > 0) && (suggestions[0].distance > distance)) suggestions.Clear();
+                                suggestions.Add(si);                          
                             }
                         }
                     }
@@ -461,7 +451,7 @@ static class SymSpell
         //display term and frequency
         foreach (var suggestion in suggestions)
         {
-            Console.WriteLine( suggestion.term + " " + suggestion.distance.ToString() + " " + suggestion.count.ToString());
+            Console.WriteLine( suggestion.term + " " + suggestion.distance.ToString() + " " + suggestion.count.ToString("N0"));
         }
         if (verbose !=0) Console.WriteLine(suggestions.Count.ToString() + " suggestions");
     }
@@ -605,19 +595,23 @@ static class SymSpell
         }
     }
 
+    //Load a frequency dictionary or create a frequency dictionary from a text corpus
     public static void Main(string[] args)
     {
-        //Create the dictionary from a sample corpus
-        //e.g. http://norvig.com/big.txt , or any other large text corpus
+        //Manually curating/cleaning up the dictionary or using a professional frequency dictionary will increase the precision of the spelling correction.
+        //Load a frequency dictionary
+        LoadDictionary("wordfrequency_en.txt", "", 0, 1);
+
+        //Create the dictionary from a text corpus (e.g. http://norvig.com/big.txt ) 
+        //Make sure the corpus does not contain spelling errors, invalid terms and the word frequency is representative to increase the precision of the spelling correction.
+        //
         //The dictionary may contain vocabulary from different languages. 
         //If you use mixed vocabulary use the language parameter in Correct() and CreateDictionary() accordingly.
+        //
         //You may use CreateDictionaryEntry() to update a (self learning) dictionary incrementally
+        //
         //To extend spelling correction beyond single words to phrases (e.g. correcting "unitedkingom" to "united kingdom") simply add those phrases with CreateDictionaryEntry().
         //CreateDictionary("big.txt","");
-
-        //Manually curating/cleaning up the dictionary or using a professional frequency dictionary will increase the precision of the suggestions.
-        //Load a frequency dictionary
-        LoadDictionary("wordfrequency_en.txt", "", 0, 1); 
 
         ReadFromStdIn();
     }
