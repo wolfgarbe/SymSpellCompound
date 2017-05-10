@@ -42,7 +42,10 @@ __Performance__
 
 __Applications__
 
-Query correction, OCR post-processing, orthographic quality assessment, agent & chat bot conversation.
+* Query correction (10–15% of queries contain misspelled terms),
+* Chatbots,
+* OCR post-processing,
+* Automated proofreading.
 
 __Frequency dictionary__
 
