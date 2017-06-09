@@ -61,6 +61,11 @@ __Blog Posts: Algorithm, Benchmarks, Applications__
 [Very fast Data cleaning of product names, company names & street names](http://blog.faroo.com/2015/09/29/how-to-correct-company-names-street-names-product-names/)<br>
 [Sub-millisecond compound aware automatic spelling correction](https://medium.com/@wolfgarbe/symspellcompound-10ec8f467c9b)
 <br><br>
+**C#** (original source code)<br>
+https://github.com/wolfgarbe/SymSpellCompound
+
+**.NET** (NuGet package)<br>
+https://www.nuget.org/packages/SymSpellCompound
 
 ```
 Copyright (C) 2017 Wolf Garbe
