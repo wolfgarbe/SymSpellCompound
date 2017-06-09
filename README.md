@@ -66,6 +66,7 @@ https://github.com/wolfgarbe/SymSpellCompound
 
 **.NET** (NuGet package)<br>
 https://www.nuget.org/packages/SymSpellCompound
+<br><br>
 
 ```
 Copyright (C) 2017 Wolf Garbe
