@@ -70,7 +70,7 @@ https://www.nuget.org/packages/SymSpellCompound
 
 ```
 Copyright (C) 2017 Wolf Garbe
-Version: 1.0
+Version: 1.1
 Author: Wolf Garbe <wolf.garbe@faroo.com>
 Maintainer: Wolf Garbe <wolf.garbe@faroo.com>
 License:
