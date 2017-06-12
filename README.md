@@ -1,6 +1,6 @@
-# SymSpellCompound
+SymSpellCompound<br>
 [![NuGet version](https://badge.fury.io/nu/symspellcompound.svg)](https://badge.fury.io/nu/symspellcompound)
-
+========
 
 __Compound aware automatic spelling correction__
 
