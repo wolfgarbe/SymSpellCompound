@@ -1,5 +1,4 @@
 SymSpellCompound<br>
-[![NuGet version](https://badge.fury.io/nu/symspellcompound.svg)](https://badge.fury.io/nu/symspellcompound)
 ========
 
 
