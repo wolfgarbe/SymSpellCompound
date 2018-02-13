@@ -1,7 +1,8 @@
 SymSpellCompound<br>
 
-### SymSpellCompound has been integrated into [SymSpell](https://github.com/wolfgarbe/SymSpell). Please visit the [SymSpell](https://github.com/wolfgarbe/SymSpell) repository!  
 ========
+
+### SymSpellCompound has been integrated into [SymSpell](https://github.com/wolfgarbe/SymSpell). Please visit the [SymSpell](https://github.com/wolfgarbe/SymSpell) repository!  
 
 __Compound aware automatic spelling correction__
 
