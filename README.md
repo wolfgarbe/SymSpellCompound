@@ -1,6 +1,7 @@
 SymSpellCompound<br>
-
+[![NuGet version](https://badge.fury.io/nu/symspellcompound.svg)](https://badge.fury.io/nu/symspellcompound)
 ========
+
 
 ### SymSpellCompound has been integrated into [SymSpell](https://github.com/wolfgarbe/SymSpell). Please visit the [SymSpell](https://github.com/wolfgarbe/SymSpell) repository!  
 
