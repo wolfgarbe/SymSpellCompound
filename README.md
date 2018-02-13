@@ -4,6 +4,8 @@ SymSpellCompound<br>
 
 ### SymSpellCompound has been integrated into [SymSpell](https://github.com/wolfgarbe/SymSpell). Please visit the [SymSpell](https://github.com/wolfgarbe/SymSpell) repository!  
 
+========
+
 __Compound aware automatic spelling correction__
 
 __SymSpellCompound__ supports __compound__ aware __automatic__ spelling correction of __multi-word input__ strings. <br>It is built on top of [SymSpell](https://github.com/wolfgarbe/symspell)'s __1 million times faster__ spelling correction algorithm.
